@@ -38,6 +38,9 @@
     <iframe src="https://script.google.com/macros/s/AKfycbx0HcPPnX0AmCpxtNfAM483a0-V3GHFajMSJvt6O2n8JYaObKnM7KrMgAUqtKuYa4jI/exec" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </body>
   <script>
-    document.children[0].style.zoom = '175%';
+    document.addEventListener('DOMContentLoaded', domContentLoaded);
+    function domContentLoaded(){
+      document.children[0].style.zoom = '175%';
+    }
   </script>
 </html>
