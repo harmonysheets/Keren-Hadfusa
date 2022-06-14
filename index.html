@@ -33,7 +33,7 @@
       }
     </style>
   </head>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <body>
     <iframe id="webapp" src="https://script.google.com/macros/s/AKfycbwaRaBM-sCIekgIpMkrKi7sophQW4tjd-LV-BcV1Z-NDJOa1GANthP2wmfLi5mMfhnBiQ/exec" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" allow="clipboard-write">Loading…</iframe>
   </body>
@@ -49,7 +49,7 @@
         console.log('failed getting children ' + e)
       }
       try {
-  console.log(webapp.getElementsByTagName('title')[0]);
+  console.log(webapp.contentDocument.title);
       } catch (e) {
        console.log('failed getting title ' + e) 
       }
