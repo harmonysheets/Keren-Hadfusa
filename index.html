@@ -15,7 +15,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>1Keren Hadfusa</title>
+    <title>Keren Hadfusa</title>
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/sPnZzxv/Hadfusa-without-background-1-11-2021.png">
     <style type="text/css">
       body, html {
@@ -42,7 +42,17 @@
     var webapp = document.getElementById('webapp');
     webapp.onload = function() {
       console.log('iframe loaded')
-  console.log(webapp.contentDocument);
+      console.log(webapp);
+      try {
+        console.log(webapp.children);
+      } catch (e) {
+        console.log('failed getting children ' + e)
+      }
+      try {
+  console.log(webapp.getElementsByTagName('title')[0]);
+      } catch (e) {
+       console.log('failed getting title ' + e) 
+      }
 };
 //     setTimeout(function () {
       
