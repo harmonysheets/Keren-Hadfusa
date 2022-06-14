@@ -15,7 +15,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>3Keren Hadfusa</title>
+    <title>4Keren Hadfusa</title>
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/sPnZzxv/Hadfusa-without-background-1-11-2021.png">
     <style type="text/css">
       body, html {
@@ -42,7 +42,9 @@
     setTimeout(function () {
       
     console.log(document.getElementsByTagName('iframe')[0])
+      console.log(document.getElementsByTagName('iframe')[0].getElementsByTagName('title')[0].textContent)
     if(document.getElementsByTagName('iframe')[0].getElementsByTagName('title')[0].textContent == 'Page Not Found'){
+      console.log('page not found')
        document.getElementsByTagName('body')[0].innerHTML = '<h3>Sorry this web app is temporarily unavailable while we are working on updates. Please restart in a few minutes</h3>'
     }
       }, 5000);
