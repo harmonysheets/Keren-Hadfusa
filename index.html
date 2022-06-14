@@ -42,7 +42,7 @@
     setTimeout(function () {
       
     console.log(document.getElementsByTagName('iframe')[0])
-      console.log(document.getElementsByTagName('iframe')[0].getElementsByTagName('title')[0].textContent)
+      console.log(document.getElementsByTagName('iframe')[0].children)
     if(document.getElementsByTagName('iframe')[0].getElementsByTagName('title')[0].textContent == 'Page Not Found'){
       console.log('page not found')
        document.getElementsByTagName('body')[0].innerHTML = '<h3>Sorry this web app is temporarily unavailable while we are working on updates. Please restart in a few minutes</h3>'
