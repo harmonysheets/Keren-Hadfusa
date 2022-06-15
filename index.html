@@ -15,7 +15,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Keren Hadfusa</title>
+    <title>1Keren Hadfusa</title>
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/sPnZzxv/Hadfusa-without-background-1-11-2021.png">
     <style type="text/css">
       body, html {
@@ -39,22 +39,24 @@
   </body>
   
   <script>
-    function UrlExists(url) {
-        var http = new XMLHttpRequest();
-        http.open('HEAD', url, false);
-        http.send();
-        if (http.status != 404)
-            return true;
-        else
-            return false;
-    }
-    
-    if(!UrlExists("https://script.google.com/macros/s/AKfycbzV9eaa0Yz-Qq0eaHh5VMMFJuyhzBg8l4D5Z0YNyDaukxPoaJY7T7k93YUQJlia9f-IXA/exec")){
-      console.log('error')
-      document.getElementById('body').innerHTML = 'Please refresh in a few minutes.';
-    } else {
-      console.log('success');
-    }
+    function urlExists(url, callback) {
+  fetch(url, { method: 'head' })
+  .then(function(status) {
+    callback(status.ok)
+  });
+}
+
+let url = 'https://script.google.com/macros/s/AKfycbzV9eaa0Yz-Qq0eaHh5VMMFJuyhzBg8l4D5Z0YNyDaukxPoaJY7T7k93YUQJlia9f-IXA/exec';
+
+urlExists(url, function(exists) {
+  if (exists) {
+    // it exists, do something
+    console.log('success')
+  } else {
+    // it doesn't exist, do something else
+    console.log('error')
+  }
+});
 //     var webapp = document.getElementById('webapp');
 //     webapp.onload = function() {
 //       console.log('iframe loaded')
