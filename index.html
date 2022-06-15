@@ -50,7 +50,10 @@
     }
     
     if(!UrlExists("https://script.google.com/macros/s/AKfycbzV9eaa0Yz-Qq0eaHh5VMMFJuyhzBg8l4D5Z0YNyDaukxPoaJY7T7k93YUQJlia9f-IXA/exec")){
+      console.log('error')
       document.getElementById('body').innerHTML = 'Please refresh in a few minutes.';
+    } else {
+      console.log('success');
     }
 //     var webapp = document.getElementById('webapp');
 //     webapp.onload = function() {
