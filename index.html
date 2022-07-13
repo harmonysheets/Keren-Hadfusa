@@ -35,7 +35,7 @@
   </head>
 
   <body id="body">
-    <p onclick="reloadWebapp()">Click to reload3</p>
+    <p onclick="reloadWebapp()">Click to reload</p>
     <iframe src="https://script.google.com/macros/s/AKfycbyxGRoHaRO8HGl14uoiO7buEYtWotb60iL9kAfPu2nPhAuCE-0H9ift7GcNzneE6keZ/exec" id="webapp" title="Keren Hadfusa" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" allow="clipboard-write">Loading…</iframe>
   </body>
   
@@ -43,7 +43,8 @@
     
     function reloadWebapp(){
       console.log('reload webapp')
-      document.getElementById('webapp').contentDocument.location.reload(true);
+//       document.getElementById('webapp').contentDocument.location.reload(true);
+      document.getElementById('webapp').src += '';
     }
     
 //     var webapp = document.getElementById('webapp');
