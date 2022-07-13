@@ -15,7 +15,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Keren Hadfusa1</title>
+    <title>Keren Hadfusa</title>
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/sPnZzxv/Hadfusa-without-background-1-11-2021.png">
     <style type="text/css">
       body, html {
@@ -39,14 +39,15 @@
   </body>
   
   <script>
-    setInterval(runnn, 2000);
+    setInterval(checkForSoftwareUpdate, 2000);
     
-    function runnn(){
+    function checkForSoftwareUpdate(){
       const iframeSrc = document.getElementById('webapp').src
-      fetch('https://script.google.com/macros/s/AKfycbxNDkSzDC369mDqYtMURch-Hj9tQDIxur3Iy-Grl5OwWO-5VF5brBkkhA58Lk2rZbGBwA/exec')
+      fetch('https://script.google.com/macros/s/AKfycbwJ7GZR8L-HWaCGqcpCoj5bstPfVxJoMe_m7y3KEukwruVTIEg8XYumGoezOeHACYGZiw/exec')
         .then(response => response.text())
         .then(data => {
-        console.log(data)
+        console.log(data[0])
+        console.log(data[1])
         console.log(data == iframeSrc)
         });
     }
