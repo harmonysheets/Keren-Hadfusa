@@ -15,7 +15,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Keren Hadfusa1</title>
+    <title>Keren Hadfusa</title>
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/0QRNGQR/Breslev-Logo-HEX-320100.png">
     <style type="text/css">
       body, html {
@@ -58,7 +58,7 @@
           } else if (webappUrl !== iframeSrc && softwareUpdateSetting === 'Force'){
             reloadWebapp(webappUrl);
           } else if (webappUrl !== iframeSrc && softwareUpdateSetting !== 'Force'){
-            if(remindForUpdate =< 0){
+            if(remindForUpdate <= 0){
               let text = "There is a software update available!\nDo you want to update now?\nIf you choose 'No' the system will remind you in an hour.";
               if (confirm(text) == true) {
                 reloadWebapp(webappUrl);
