@@ -35,7 +35,7 @@
   </head>
 
   <body id="body">
-    <p onclick="reloadWebapp()">Click to reload</p>
+    <p onclick="reloadWebapp()">Click to reload2</p>
     <iframe src="https://script.google.com/macros/s/AKfycbyxGRoHaRO8HGl14uoiO7buEYtWotb60iL9kAfPu2nPhAuCE-0H9ift7GcNzneE6keZ/exec" id="webapp" title="Keren Hadfusa" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" allow="clipboard-write">Loading…</iframe>
   </body>
   
@@ -43,7 +43,10 @@
     setInterval(runnn, 2000);
     
     function runnn(){
-      console.log('runnningn')
+      fetch('https://script.google.com/macros/s/AKfycbxk6HIKqQTyEe7R7Jz3ZPTqtq34Tk9v2_WVBCoMk0NSXVxC1J8sPUOkL0zZ_vW-AH3gaA/exec')
+  .then(response => response.json())
+  .then(data => console.log(data));
+//       console.log(urlFetch('https://script.google.com/macros/s/AKfycbxk6HIKqQTyEe7R7Jz3ZPTqtq34Tk9v2_WVBCoMk0NSXVxC1J8sPUOkL0zZ_vW-AH3gaA/exec'))
     }
     
     function reloadWebapp(){
