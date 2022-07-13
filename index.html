@@ -5,7 +5,7 @@
  * 🌐 harmonysheets.com
  * ©2021 Harmony® Codes All Rights Reserved.
  * Strictly forbidden to copy any of the code.
- * Code created for Keren Hadfusa.
+ * Code created for Keren Hadfusa of Breslev.
  * 
 -->
 
@@ -45,24 +45,26 @@
   </body>
   
   <script>
+    // var to keep track when to remind again for update
     var remindForUpdate = 0;
     
-    checkForSoftwareUpdate();
-    setInterval(checkForSoftwareUpdate, 5000);
+    checkForSoftwareUpdate(); // system starting first time to set the iframes src
+    setInterval(checkForSoftwareUpdate, 5000); // running the checkSoftwareUpdate every 5 seconds.
     
     function checkForSoftwareUpdate(){
-      const iframeSrc = document.getElementById('webapp').src
+      const iframeSrc = document.getElementById('webapp').src;
+      // fetching the new web app url
       fetch('https://script.google.com/macros/s/AKfycbyPOLc9npfa50W2MJXhy8VagoZVOrlF-e9Edi_w51AgiZoWr9rgEZu35qDdMySM6t-iVQ/exec')
         .then(response => response.text())
         .then(data => {
           var webappUrl = data.split(',')[0];
           var softwareUpdateSetting = data.split(',')[1];
 
-          if (iframeSrc == '') {
+          if /** iframe empty when started first time */ (iframeSrc == '') {
             reloadWebapp(webappUrl, true);
-          } else if (webappUrl !== iframeSrc && softwareUpdateSetting === 'Force'){
+          } else if /** url is updated and setting set to force update */ (webappUrl !== iframeSrc && softwareUpdateSetting === 'Force'){
             reloadWebapp(webappUrl);
-          } else if (webappUrl !== iframeSrc && softwareUpdateSetting !== 'Force'){
+          } else if /** url is updated and setting set to not force update */ (webappUrl !== iframeSrc && softwareUpdateSetting !== 'Force'){
             if(remindForUpdate <= 0){
               let text = "There is a software update available!\nDo you want to update now?\nIf you choose 'Cancel' the system will remind you in an hour.";
               if (confirm(text) == true) {
